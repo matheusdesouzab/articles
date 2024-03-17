@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Durante o desenvolvimento de uma aplicação em Laravel, é comum a necessidade de alterar dados das colunas em nossa base de dados. Felizmente, o Laravel oferece uma maneira simples de realizar essas mudanças usando o método change. Neste artigo, vamos explorar o uso desse método na versão 11 do Laravel.
+Durante o desenvolvimento de uma aplicação em Laravel, é comum a necessidade de alterar dados das colunas em nossa base de dados. Felizmente, o Laravel oferece uma maneira simples de realizar essas mudanças usando o método `change`. Neste artigo, vamos explorar o uso desse método na versão 11 do Laravel.
 
 ## Criando uma migração de exemplo
 
@@ -103,6 +103,8 @@ return new class extends Migration
 
 ```
 
+> Ao criar migrações no Laravel é importante implementar tanto o método up() quanto o método down(). Enquanto o método up() aplica as alterações no esquema do banco de dados, o método down() permite reverter essas alterações de forma segura, caso necessário. Isso garante a capacidade de desfazer mudanças e contribui para a estabilidade e flexibilidade do desenvolvimento do projeto.
+
 Como podemos observar, o processo é simples. Basta definir a nova estrutura da coluna e, em seguida, chamar o método `change`. Com isso, ao executar `php artisan migrate`, as alterações serão aplicadas.
 
 ## Pontos importantes
@@ -117,7 +119,7 @@ A partir da versão 11 do Laravel, é necessário repetir toda a estrutura da co
 
 ### Doctrine/DBAL
 
-Se estiver usando uma versão muito antiga do Laravel, pode ser necessário instalar a dependência do DBAL para que o `change` funcione. O doctrine/dbal é uma biblioteca de banco de dados que fornece uma camada de abstração sobre diferentes sistemas de gerenciamento de banco de dados em PHP. Execute o seguinte comando para instalar a dependência em seu projeto:
+Se estiver usando uma versão muito antiga do Laravel, pode ser necessário instalar a dependência do DBAL para que o `change` funcione. O doctrine/dbal é uma biblioteca de banco de dados que fornece uma camada de abstração sobre diferentes sistemas de gerenciamento de banco de dados em PHP. Execute o seguinte comando para instalar a dependência no seu projeto, se necessário: 
 
 ```php
 composer require doctrine/dbal
