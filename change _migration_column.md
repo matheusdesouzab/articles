@@ -1,4 +1,4 @@
-# Como utilizar o método change nas migrations no Laravel 11
+# Como utilizar o método [change](https://laravel.com/docs/11.x/migrations#modifying-columns) nas migrations no Laravel 11
 
 ## Introdução
 
