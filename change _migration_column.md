@@ -57,7 +57,7 @@ Com a migração criada, podemos executar `php artisan migrate`. Se tudo ocorrer
 
 ## Utilizando o método change
 
-Após a criação da tabela, podemos imaginar que precisamos fazer algumas alterações:
+Após a criação da tabela, vamos imaginar que precisamos fazer algumas alterações:
 
 - A coluna isbn precisa ter tamanho 17 em vez de 10.
 - A coluna descrição deve ser do tipo text em vez de varchar.
